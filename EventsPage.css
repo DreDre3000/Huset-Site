@@ -1,0 +1,64 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr;
+  grid-template-areas: "Nav-Bar Nav-Bar Nav-Bar Nav-Bar" "Event-1-IMG Event-1-IMG Event-1-TEXT Event-1-TEXT" "Event-2-TEXT Event-2-TEXT Event-2-IMG Event-2-IMG";
+}
+
+.Nav-Bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "Logo Nav1 Nav2 Nav3";
+  grid-area: Nav-Bar;
+    border-bottom: 5px solid black;
+}
+
+.Logo { grid-area: Logo; }
+
+.Nav1 { grid-area: Nav1; }
+
+.Nav2 { grid-area: Nav2; }
+
+.Nav3 { grid-area: Nav3; }
+
+.Event-1-IMG { grid-area: Event-1-IMG; }
+
+.Event-1-TEXT { grid-area: Event-1-TEXT; }
+
+.Event-2-IMG { grid-area: Event-2-IMG; }
+
+.Event-2-TEXT { grid-area: Event-2-TEXT; }
+
+/* Nav Bar Styling!!*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+/* Nav Bar Styling ENDS!!*/
+
+.ThomasClausen {
+    float: right;
+}

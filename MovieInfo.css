@@ -1,0 +1,49 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr;
+  grid-template-areas: "Nav-Bar Nav-Bar Nav-Bar Nav-Bar" "Main Main Main Main" "Main Main Main Main";
+}
+
+.Nav-Bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "Logo Nav_op_1 Nav_op_2 Nav_op_3";
+  grid-area: Nav-Bar;
+}
+
+.Logo { grid-area: Logo; }
+
+.Nav_op_1 { grid-area: Nav_op_1; }
+
+.Nav_op_2 { grid-area: Nav_op_2; }
+
+.Nav_op_3 { grid-area: Nav_op_3; }
+
+.Main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "Movie_Title Date-_Time Empty" "Movie_Description Movie-Trailer Empty" "Price-\&\ Button Movie-Trailer Empty";
+  grid-area: Main;
+    max-width: 100vw;
+            max-height: 100vh;
+}
+
+.mainimg{
+    max-width: 100vw;
+            max-height: 100vh;
+}
+
+.Movie_Title { grid-area: Movie_Title; }
+
+.Movie_Description { grid-area: Movie_Description; }
+
+.Price-\&\ Button { grid-area: Price-\&\ Button; }
+
+.Date-_Time { grid-area: Date-_Time; }
+
+.Movie-Trailer { grid-area: Movie-Trailer; }
+
+.Empty { grid-area: Empty; }
