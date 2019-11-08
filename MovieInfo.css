@@ -36,7 +36,12 @@ color: white;
     border-radius: 10px;
 }
 
-.Trailer { grid-area: Trailer; }
+.Trailer {
+    grid-area: Trailer;
+   position: relative;
+  top: 50%;
+    left:10%;
+}
 
 .Nav_bar {
   display: grid;
@@ -82,3 +87,41 @@ transition: all 0.4s ease 0s;
     transition-duration: 1s;
 }
 /*Button Styling ENDS!!! */
+
+/* Nav Bar Styling!!*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+    color: white;
+}
+
+ul:hover{
+     background-color: #111;
+    color: white;
+    position:relative;
+    z-index: -2;
+}
+
+
+/* Nav Bar Styling ENDS!!*/
