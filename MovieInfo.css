@@ -2,48 +2,83 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.1fr 1fr 1fr;
-  grid-template-areas: "Nav-Bar Nav-Bar Nav-Bar Nav-Bar" "Main Main Main Main" "Main Main Main Main";
+  grid-template-areas: "Nav_bar Nav_bar Nav_bar Nav_bar" "Main Main Main Main" "Main Main Main Main";
+
 }
 
-.Nav-Bar {
+.Main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 1fr 0.2fr;
+  grid-template-areas: "Header Date_Time" "Content Trailer" "Button_Price .";
+  grid-area: Main;
+    background-image: url(Images/life-is-beautiful.jpeg);
+    background-repeat: no-repeat;
+}
+
+.Header { grid-area: Header; }
+
+.Content { grid-area: Content;
+color: white;
+}
+
+.Button_Price {
+    grid-area: Button_Price;
+}
+
+.Date_Time {
+    grid-area: Date_Time;
+    word-wrap: break-word;
+    width: 150px;
+  border: 2.5px solid #ffffff;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.Trailer { grid-area: Trailer; }
+
+.Nav_bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "Logo Nav_op_1 Nav_op_2 Nav_op_3";
-  grid-area: Nav-Bar;
+  grid-template-areas: "Logo Op1 Op2 Op3";
+  grid-area: Nav_bar;
 }
 
 .Logo { grid-area: Logo; }
 
-.Nav_op_1 { grid-area: Nav_op_1; }
+.Op1 { grid-area: Op1; }
 
-.Nav_op_2 { grid-area: Nav_op_2; }
+.Op2 { grid-area: Op2; }
 
-.Nav_op_3 { grid-area: Nav_op_3; }
+.Op3 { grid-area: Op3; }
 
-.Main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "Movie_Title Date-_Time Empty" "Movie_Description Movie-Trailer Empty" "Price-\&\ Button Movie-Trailer Empty";
-  grid-area: Main;
-    max-width: 100vw;
-            max-height: 100vh;
+
+
+
+
+
+/*Button Styling Begins */
+
+
+.example_c {
+color: #494949 !important;
+text-transform: uppercase;
+text-decoration: none;
+background: #ffffff;
+padding: 20px;
+display: inline-block;
+transition: all 0.4s ease 0s;
+border-radius: 50px;
 }
 
-.mainimg{
-    max-width: 100vw;
-            max-height: 100vh;
+.example_c:hover {
+color: #ffffff !important;
+background: #000000;
+border-color: #000000 !important;
+transition: all 0.4s ease 0s;
+    border-radius: 0px;
+    transition-duration: 1s;
 }
-
-.Movie_Title { grid-area: Movie_Title; }
-
-.Movie_Description { grid-area: Movie_Description; }
-
-.Price-\&\ Button { grid-area: Price-\&\ Button; }
-
-.Date-_Time { grid-area: Date-_Time; }
-
-.Movie-Trailer { grid-area: Movie-Trailer; }
-
-.Empty { grid-area: Empty; }
+/*Button Styling ENDS!!! */
