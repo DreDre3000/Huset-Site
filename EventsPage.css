@@ -1,16 +1,16 @@
-.grid-container {
+/*.grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr 1fr 1fr;
-  grid-template-areas: "Nav-Bar Nav-Bar Nav-Bar Nav-Bar" "Event-1-IMG Event-1-IMG Event-1-TEXT Event-1-TEXT" "Event-2-TEXT Event-2-TEXT Event-2-IMG Event-2-IMG";
-}
+  grid-template-rows: 1fr;
+  grid-template-areas: "Nav-Bar Nav-Bar Nav-Bar Nav-Bar";
+}*/
 
 .Nav-Bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "Logo Nav1 Nav2 Nav3";
-  grid-area: Nav-Bar;
+  /*grid-area: Nav-Bar;*/
     border-bottom: 5px solid black;
 }
 
@@ -22,14 +22,18 @@
 
 .Nav3 { grid-area: Nav3; }
 
-.Event-1-IMG { grid-area: Event-1-IMG; }
-
-.Event-1-TEXT { grid-area: Event-1-TEXT; }
-
-.Event-2-IMG { grid-area: Event-2-IMG; }
-
-.Event-2-TEXT { grid-area: Event-2-TEXT; }
-
+.event {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.event:nth-child(odd) .Event-1-IMG{
+    grid-column: 2;
+    grid-row:1;
+}
+.event:nth-child(odd) .Event-1-TEXT{
+    grid-column: 1;
+    grid-row:1;
+}
 /* Nav Bar Styling!!*/
 
 ul {
