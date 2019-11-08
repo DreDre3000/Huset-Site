@@ -16,7 +16,7 @@ myData.forEach(showPost)
 function showPost(post){
     console.log(post)
     //2 cloning a template
-    const imgPath = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
+    const imgPath = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
     const template = document.querySelector(".postTemplate").content;
     const postCopy = template.cloneNode(true);
     //3. textcontent & innerHTML
