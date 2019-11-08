@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", getData);
 function getData(){
     console.log("getData")
    //fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/posts?per_page=2&page=1")
-     fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/Films?_embed")
+     fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/concerts_theatre_eve?_embed")
     .then(res=>res.json())
     .then(handleData)
 }
@@ -23,13 +23,17 @@ function showPost(post){
     const h1 = postCopy.querySelector("h1")
     h1.innerHTML=post.title.rendered;
 
-    //3. Date of screening
-    const genre = postCopy.querySelector(".DOS")
-    genre.innerHTML=post.date_of_screening;
+    // Venue
+    /*const venue = postCopy.querySelector(".venue")
+    venue.innerHTML=post.venue;
+*/
+     //How Long is the event
+    /*const soldout = postCopy.querySelector(".soldout")
+    soldout.innerHTML=post.soldout;*/
 
-     //3. How Long is the event
-    const duration = postCopy.querySelector(".duration")
-    duration.innerHTML=post.duration+" Minutes";
+    //The Price
+    /*const price = postCopy.querySelector(".price")
+    price.innerHTML=post.price+" DKK";*/
 
 
 
@@ -38,16 +42,16 @@ function showPost(post){
     img.setAttribute("alt", "Movie Image" +post.title.rendered)
 
 
-    const a = postCopy.querySelector("a");
-    a.href="Sub.html?id="+post.id
+    /*const a = postCopy.querySelector("a");
+    a.href="Sub.html?id="+post.id*/
 
 
 
     const content = postCopy.querySelector("section")
     content.innerHTML=post.content.rendered;
 
-    const publisher = postCopy.querySelector(".publisher")
-    publisher.innerHTML=post.publisher;
+    //const publisher = postCopy.querySelector(".publisher")
+    //publisher.innerHTML=post.publisher;
 
     //const contentImage = postCopy.querySelector(".contentImage")
     //content.innerHTML=post._embedded.wp:featuredmedia.source_url;
