@@ -42,8 +42,9 @@ function showPost(post){
     img.setAttribute("alt", "Movie Image" +post.title.rendered)
 
 
-    /*const a = postCopy.querySelector("a");
-    a.href="Sub.html?id="+post.id*/
+    //trying dynamic subpage
+    const a = postCopy.querySelector("a");
+    a.href="Sub.html?id="+post.id
 
 
 
