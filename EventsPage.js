@@ -32,11 +32,11 @@ function showPost(post){
     soldout.innerHTML=post.soldout;*/
 
     //The Price
-    /*const price = postCopy.querySelector(".price")
-    price.innerHTML=post.price+" DKK";*/
+    const price = postCopy.querySelector(".price")
+    price.innerHTML=post.price+" DKK";
 
 
-
+//Inserts an image in the template
     const img =postCopy.querySelector("img.cover");
     img.setAttribute("src", imgPath)
     img.setAttribute("alt", "Movie Image" +post.title.rendered)
