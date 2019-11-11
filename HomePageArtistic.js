@@ -1,5 +1,11 @@
 window.addEventListener("DOMContentLoaded", getData);
 
+
+function init(){
+    preloader.setup();
+    getData()
+}
+
 function getData(){
     console.log("getData")
    //fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/posts?per_page=2&page=1")

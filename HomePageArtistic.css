@@ -112,7 +112,7 @@
 
 
 .heroimg {
-    width: 100%;
+   width: 100%;
 }
 
 /* Nav Bar Styling!!*/
@@ -121,7 +121,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000000;
 }
 
 li {
@@ -138,9 +138,14 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: #ffffff;
+    color: #000000;
 }
 
+ul:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
 /*Nav Bar Styling ENDS*/
 
 /*Styling for H1 in the main section*/

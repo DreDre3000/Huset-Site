@@ -10,7 +10,6 @@ fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/concerts_theatre_eve/" + i
 function showBook(post) {
     console.log(post)
     document.querySelector("article h1").textContent = post.title.rendered
-
 }
 
 
