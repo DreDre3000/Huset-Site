@@ -5,6 +5,10 @@
   grid-template-areas: "Nav-Bar Nav-Bar Nav-Bar Nav-Bar";
 }*/
 
+*{
+    box-sizing: border-box;
+}
+
 .Nav-Bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -33,6 +37,17 @@
     display:grid;
     grid-template-columns: 1fr 1fr;
 }
+
+
+.Hero-Image {
+    grid-area: Hero-Image;
+}
+
+.heroimg {
+   width: 98.5vw;
+}
+
+
 
 /* Makes the image move to postition 2 */
 .event:nth-child(odd) .Event-1-IMG{
