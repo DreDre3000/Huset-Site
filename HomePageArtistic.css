@@ -1,7 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-rows: 0.05fr 1fr 1fr 0.5fr 0.5fr;
     grid-template-areas: "Nav-Bar Nav-Bar Nav-Bar""Hero-Image Hero-Image Hero-Image""Movie-option Movie-option Movie-option""See-more See-more See-more""Footer Footer Footer";
 }
 
@@ -11,13 +15,14 @@
     grid-template-rows: 1fr;
     grid-template-areas: "Huset-Logo Nav-Option1 Nav-Option2 Nav-Option3";
     grid-area: Nav-Bar;
-    background-color: white;
+    background-color: black;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
 #topnav .icon {
   display: none;
 }
+
 
 
 
