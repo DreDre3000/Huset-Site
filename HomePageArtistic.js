@@ -1,4 +1,6 @@
-window.addEventListener("DOMContentLoaded", getData);
+/*DO NOT NEED JS ON THIS PAGE!
+
+/*window.addEventListener("DOMContentLoaded", getData);
 
 
 function init(){

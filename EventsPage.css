@@ -38,6 +38,7 @@
 .event {
     display:grid;
     grid-template-columns: 1fr 1fr;
+    height: 50vh;
 }
 
 
@@ -104,3 +105,15 @@ ul:hover{
 h1 {
     font-family: 'Nunito', sans-serif;
 }
+
+
+
+.example_c {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    border-radius: 50px;
