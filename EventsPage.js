@@ -1,19 +1,20 @@
 window.addEventListener("DOMContentLoaded", getData);
 
-function getData(){
+function getData() {
     console.log("getData")
-   //fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/posts?per_page=2&page=1")
-     fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/concerts_theatre_eve?_embed")
-    .then(res=>res.json())
-    .then(handleData)
+    //fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/posts?per_page=2&page=1")
+    fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/concerts_theatre_eve?_embed")
+        .then(res => res.json())
+        .then(handleData)
 }
 
-function handleData(myData){
-// console.log(myData);
-// 1 loop
-myData.forEach(showPost)
+function handleData(myData) {
+    // console.log(myData);
+    // 1 loop
+    myData.forEach(showPost)
 }
-function showPost(post){
+
+function showPost(post) {
     console.log(post)
     //2 cloning a template
     const imgPath = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
@@ -21,35 +22,40 @@ function showPost(post){
     const postCopy = template.cloneNode(true);
     //3. textcontent & innerHTML
     const h1 = postCopy.querySelector("h1")
-    h1.innerHTML=post.title.rendered;
+    h1.innerHTML = post.title.rendered;
 
     // Venue
     /*const venue = postCopy.querySelector(".venue")
     venue.innerHTML=post.venue;
 */
-     //How Long is the event
+    //How Long is the event
     /*const soldout = postCopy.querySelector(".soldout")
     soldout.innerHTML=post.soldout;*/
 
     //The Price
     const price = postCopy.querySelector(".price")
-    price.innerHTML=post.price+" DKK";
+    price.innerHTML = post.price + " DKK";
 
 
-//Inserts an image in the template
-    const img =postCopy.querySelector("img.cover");
+    //Inserts an image in the template
+    const img = postCopy.querySelector("img.cover");
     img.setAttribute("src", imgPath)
-    img.setAttribute("alt", "Movie Image" +post.title.rendered)
+    img.setAttribute("alt", "Movie Image" + post.title.rendered)
 
 
     //trying dynamic subpage
     const a = postCopy.querySelector("a");
-    a.href="Sub.html?id="+post.id
+    a.href = "Sub.html?id=" + post.id
 
 
+//Working code for fething full text
+    //const content = postCopy.querySelector("section")
+    //content.innerHTML = post.content.rendered;
 
-    const content = postCopy.querySelector("section")
-    content.innerHTML=post.content.rendered;
+    const description = postCopy.querySelector("section")
+    description.innerHTML = post.description;
+
+
 
     //const publisher = postCopy.querySelector(".publisher")
     //publisher.innerHTML=post.publisher;
@@ -67,10 +73,10 @@ function showPost(post){
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "Nav-Bar") {
-    x.className += "responsive";
-  } else {
-    x.className = "Nav-Bar";
-  }
+    var x = document.getElementById("myTopnav");
+    if (x.className === "Nav-Bar") {
+        x.className += "responsive";
+    } else {
+        x.className = "Nav-Bar";
+    }
 }
