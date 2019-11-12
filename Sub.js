@@ -9,7 +9,23 @@ fetch("http://dredesigns.dk/MyWordpress/wp-json/wp/v2/concerts_theatre_eve/" + i
 
 function showBook(post) {
     console.log(post)
+
+    //not working .. cant get images
+    //const imgPath = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+
+    //Shows the title of the post
     document.querySelector("article h1").textContent = post.title.rendered
+
+    //Shows the content
+    document.querySelector("section").textContent = post.content.rendered
+
+    //shows the image NOT WORKING!
+    //const img = document.querySelector("img.cover")
+    //img.setAttribute("src", imgPath)
+    //img.setAttribute("alt","event image" + post.title.rendered)
+
+
+
 }
 
 
