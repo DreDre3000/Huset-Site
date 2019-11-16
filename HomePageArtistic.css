@@ -96,6 +96,7 @@
     grid-template-areas: "Text-Area Text-Area .";
     grid-area: Movie-option;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/life-is-beautiful.jpeg);
+    background-repeat: no-repeat;
 }
 
 .Text-Area {
