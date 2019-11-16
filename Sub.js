@@ -14,10 +14,10 @@ function showBook(post) {
     //const imgPath = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
 
     //Shows the title of the post
-    document.querySelector("article h1").textContent = post.title.rendered
+    document.querySelector("article h1").innerHTML = post.title.rendered
 
     //Shows the content
-    document.querySelector("section").textContent = post.content.rendered
+    document.querySelector("section").innerHTML = post.content.rendered
 
     //shows the image NOT WORKING!
     //const img = document.querySelector("img.cover")
