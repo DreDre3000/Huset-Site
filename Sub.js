@@ -17,7 +17,7 @@ function showBook(post) {
     document.querySelector("article h1").innerHTML = post.title.rendered
 
     //Shows the content
-    document.querySelector("section").innerHTML = post.content.rendered
+    document.querySelector("article p").innerHTML = post.content.rendered
 
     //shows the image NOT WORKING!
     //const img = document.querySelector("img.cover")
