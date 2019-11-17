@@ -11,7 +11,7 @@ function showBook(post) {
     console.log(post)
 
     //not working .. cant get images
-    //const imgPath = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+    const imgPath = post.image.guid;
 
     //Shows the title of the post
     document.querySelector("article h1").innerHTML = post.title.rendered
@@ -20,9 +20,9 @@ function showBook(post) {
     document.querySelector("article p").innerHTML = post.content.rendered
 
     //shows the image NOT WORKING!
-    //const img = document.querySelector("img.cover")
-    //img.setAttribute("src", imgPath)
-    //img.setAttribute("alt","event image" + post.title.rendered)
+    const img = document.querySelector("div .heroimg")
+    img.setAttribute("src", imgPath)
+    img.setAttribute("alt","event image" + post.title.rendered)
 
 
 
